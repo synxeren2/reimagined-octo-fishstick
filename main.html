@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dizi İzleme - StreamHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 StreamHub</h1>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Dizi ara..."
+                >
+                <button id="searchBtn">Ara</button>
+            </div>
+        </header>
+
+        <nav class="filters">
+            <button class="filter-btn active" data-filter="popular">Popüler</button>
+            <button class="filter-btn" data-filter="top_rated">En İyi Puanlı</button>
+            <button class="filter-btn" data-filter="on_the_air">Yayında</button>
+        </nav>
+
+        <main id="seriesContainer" class="series-grid">
+            <!-- Diziler buraya yüklenecek -->
+        </main>
+
+        <div id="loadingIndicator" class="loading">
+            <p>Yükleniyor...</p>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
